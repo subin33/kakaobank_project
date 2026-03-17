@@ -93,6 +93,11 @@
     @media (max-width: 1599px) {
       font-size: 1.4rem;
     }
+    &:hover {
+      .icon-outlink {
+        opacity: 1;
+      }
+    }
   }
 }
 

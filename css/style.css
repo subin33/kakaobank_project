@@ -95,6 +95,9 @@ body {
     font-size: 1.4rem;
   }
 }
+.menu-wrap .depth1-link:hover .icon-outlink {
+  opacity: 1;
+}
 
 .icon-outlink {
   position: absolute;
