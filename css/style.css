@@ -21,3 +21,10 @@ html {
     padding-right: 52px;
   }
 }
+
+.logo {
+  display: block;
+  width: 110px;
+  height: 18px;
+  background: url(../assets/images/logo.svg) no-repeat center/contain;
+}

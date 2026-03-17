@@ -17,3 +17,10 @@
     padding-right: calc($gutter * 3 - 8px);
   }
 }
+
+.logo {
+  display: block;
+  width: 110px;
+  height: 18px;
+  background: url(../assets/images/logo.svg) no-repeat center / contain;
+}
