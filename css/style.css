@@ -46,7 +46,6 @@ body {
   left: 0;
   width: 100%;
   height: 244px;
-  background: red;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -71,6 +70,10 @@ body {
 .menu-wrap .depth1-list:hover .depth1-link {
   color: #444;
 }
+.menu-wrap .depth1-list:hover .depth2-menu-wrap {
+  opacity: 1;
+  height: 183px;
+}
 .menu-wrap .depth1-link {
   display: flex;
   height: 100%;
@@ -86,10 +89,8 @@ body {
     font-size: 1.4rem;
   }
 }
-.menu-wrap .depth1-link:hover .icon-outlink {
-  opacity: 1;
-}
-.menu-wrap .icon-outlink {
+
+.icon-outlink {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,6 +99,49 @@ body {
   transition: all 0.4s ease-in-out;
   width: 16px !important;
   height: 16px !important;
+}
+
+.depth2-menu-wrap {
+  position: absolute;
+  top: 100%;
+  width: 390px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 30;
+  padding: 0 21px;
+}
+.depth2-menu-wrap .depth2-menu-inner {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 22px 0 30px 0;
+}
+.depth2-menu-wrap ul {
+  width: 185px;
+  max-width: 185px;
+}
+.depth2-menu-wrap li {
+  margin-bottom: 12px;
+}
+.depth2-menu-wrap a {
+  display: inline-flex;
+  transition: all 0.4s ease-in-out;
+  font-size: 1.4rem;
+  position: relative;
+  font-weight: 500;
+}
+.depth2-menu-wrap a .icon-outlink {
+  transform: translateX(170%) translateY(-50%);
+}
+.depth2-menu-wrap a:hover {
+  color: #444;
+}
+.depth2-menu-wrap a:hover .icon-outlink {
+  opacity: 1;
 }
 
 .select-lang-menu li {
