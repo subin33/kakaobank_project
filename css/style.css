@@ -8,6 +8,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .con {
   max-width: 1460px;
   margin: 0 auto;
@@ -22,11 +26,43 @@ html {
   }
 }
 
+#header {
+  position: relative;
+}
+
 .logo {
   display: block;
   width: 110px;
   height: 18px;
   background: url(../assets/images/logo.svg) no-repeat center/contain;
+}
+
+.depth2-nav-bg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 244px;
+  background: red;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.depth2-nav-bg.active {
+  opacity: 1;
+}
+.depth2-nav-bg .depth2-bg-bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(244px);
+  z-index: -1;
+  backdrop-filter: blur(20px);
+  opacity: 1;
+  will-change: backdrop-filter;
+  pointer-events: none;
 }
 
 .menu-wrap .depth1-list:hover .depth1-link {
