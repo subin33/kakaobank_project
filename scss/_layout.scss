@@ -4,3 +4,16 @@
 
 @use "variables" as *;
 @use "mixins" as *;
+
+.con {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding-left: calc($gutter/2);
+  padding-right: calc($gutter/2);
+
+  @media (max-width: 1599px) {
+    max-width: 100%;
+    padding-left: calc($gutter * 3 - 8px);
+    padding-right: calc($gutter * 3 - 8px);
+  }
+}

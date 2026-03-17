@@ -19,3 +19,10 @@ $font-primary:
   sans-serif;
 
 // Font Sizes
+
+// Padding
+$gutter: 20px;
+
+@media (max-width: 1599px) {
+  $gutter: 16px;
+}

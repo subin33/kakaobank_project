@@ -7,3 +7,17 @@
 html {
   font-size: 16px;
 }
+
+.con {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 1599px) {
+  .con {
+    max-width: 100%;
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
