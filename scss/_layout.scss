@@ -104,6 +104,7 @@
   opacity: 0;
   width: 16px !important;
   height: 16px !important;
+  z-index: 100;
 }
 
 // 2차 메뉴 구현 시작
@@ -160,7 +161,7 @@
     &:not(:last-child)::after {
       content: "";
       position: absolute;
-      top: 47%;
+      top: 50%;
       right: -1px;
       transform: translateY(-55%);
       background-color: #888;
@@ -202,6 +203,23 @@
   width: 100%;
   height: 100svh;
   overflow: hidden;
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    span {
+      display: inline-block;
+      color: $white-100;
+      font-size: 6.25vw;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+  }
 
   .video-box {
     width: 100%;
