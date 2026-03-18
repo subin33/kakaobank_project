@@ -22,3 +22,7 @@ depth1Lists.forEach((list) => {
     });
   }
 });
+
+const swiper = new Swiper(".section-2-content .swiper", {
+  slidesPerView: "auto",
+});

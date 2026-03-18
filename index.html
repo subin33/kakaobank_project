@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카카오뱅크</title>
 
-    <!-- Font Awesome 불러오기 -->
+    <!-- 폰트어썸 불러오기 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <!-- Tailwind css 불러오기 -->
+
+    <!-- 테일윈드 css 불러오기 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <!-- 공통 css 연결 -->
     <link rel="stylesheet" href="./css/style.css" />
+
     <!-- 공통 js 연결 -->
     <script defer src="./js/script.js"></script>
   </head>
@@ -28,7 +36,7 @@
             <nav class="menu-wrap h-full">
               <ul class="depth1 flex h-full">
                 <li class="depth1-list">
-                  <a class="depth1-link" aria-label="소개" href="#">소개</a>
+                  <a href="#" class="depth1-link" aria-label="소개">소개</a>
                   <div class="depth2-menu-wrap">
                     <div class="depth2-menu-inner">
                       <ul aria-label="회사정보">
@@ -41,8 +49,8 @@
                         <li><a href="#">공지사항</a></li>
                         <li><a href="#">제휴문의</a></li>
                         <li>
-                          <a href="#"
-                            >입찰공고
+                          <a href="#">
+                            입찰공고
                             <img src="./assets/images/ic-lg-outlink.svg" class="icon-outlink" alt="외부 링크 아이콘" />
                           </a>
                         </li>
@@ -50,14 +58,20 @@
                     </div>
                   </div>
                 </li>
-                <li class="depth1-list"><a class="depth1-link" aria-label="서비스" href="#">서비스</a></li>
-                <li class="depth1-list"><a class="depth1-link" aria-label="ESG" href="#">ESG</a></li>
-                <li class="depth1-list"><a class="depth1-link" aria-label="미디어" href="#">미디어</a></li>
                 <li class="depth1-list">
-                  <a class="depth1-link" aria-label="투자정보" href="#">투자정보</a>
+                  <a href="#" class="depth1-link" aria-label="서비스">서비스</a>
+                </li>
+                <li class="depth1-list">
+                  <a href="#" class="depth1-link" aria-label="ESG">ESG</a>
+                </li>
+                <li class="depth1-list">
+                  <a href="#" class="depth1-link" aria-label="미디어">미디어</a>
+                </li>
+                <li class="depth1-list">
+                  <a href="#" class="depth1-link" aria-label="투자정보">투자정보</a>
                   <div class="depth2-menu-wrap">
                     <div class="depth2-menu-inner">
-                      <ul aria-label="투자정보">
+                      <ul aria-label="투자 정보">
                         <li><a href="#">주요정보</a></li>
                         <li><a href="#">공시정보</a></li>
                         <li><a href="#">경영정보</a></li>
@@ -73,16 +87,16 @@
                   </div>
                 </li>
                 <li class="depth1-list">
-                  <a class="depth1-link" aria-label="고객센터" href="#">
+                  <a href="#" class="depth1-link" aria-label="고객센터">
                     <span>고객센터</span>
                     <img src="./assets/images/ic-lg-outlink.svg" class="icon-outlink" alt="외부 링크 아이콘" />
                   </a>
                 </li>
                 <li class="depth1-list">
-                  <a class="depth1-link" aria-label="인재영입" href="#">
+                  <a href="#" class="depth1-link" aria-label="인재영입">
                     <span>인재영입</span>
-                    <img src="./assets/images/ic-lg-outlink.svg" class="icon-outlink" alt="외부 링크 아이콘"
-                  /></a>
+                    <img src="./assets/images/ic-lg-outlink.svg" class="icon-outlink" alt="외부 링크 아이콘" />
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -90,12 +104,8 @@
           <div class="header__right flex items-center">
             <nav class="select-lang-menu">
               <ul class="flex">
-                <li>
-                  <a href="#" class="ic-link ko-link"></a>
-                </li>
-                <li>
-                  <a href="#" class="ic-link en-link"></a>
-                </li>
+                <li><a href="#" class="ic-link ko-link"></a></li>
+                <li><a href="#" class="ic-link en-link"></a></li>
               </ul>
             </nav>
             <div class="mobile-menu-open">
@@ -116,7 +126,9 @@
               <div class="text-cover">
                 <span>나의 첫 번째 AI 은행</span>
               </div>
-              <div class="text-cover"><span>카카오 뱅크</span></div>
+              <div class="text-cover">
+                <span>카카오뱅크</span>
+              </div>
             </div>
             <div class="video-box">
               <video
@@ -129,7 +141,7 @@
                 preload="none"
                 aria-label="카카오뱅크 메인 비주얼 영상"
               >
-                <source src="./assets//videos/main-visual-video_pc.mp4" type="video/mp4" />
+                <source src="./assets/videos/main-visual-video_pc.mp4" type="video/mp4" />
               </video>
             </div>
             <div class="scroll-down-box">
@@ -149,6 +161,46 @@
                   <br />
                   금융 서비스를 만듭니다
                 </h2>
+              </div>
+            </div>
+          </div>
+          <div class="section-2-content">
+            <div class="swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-1">
+                  <figure>
+                    <img src="./assets/images/sec02-slide-img01.png" alt="카카오뱅크 개인 금융 서비스 - 프렌즈 체크카드" />
+                  </figure>
+                </div>
+                <div class="swiper-slide swiper-slide-2">
+                  <figure>
+                    <img
+                      src="./assets/images/sec02-slide-img02.png"
+                      alt="카카오뱅크 개인 금융 서비스 - AI 금융 계산기(어려운 계산은 제가 도와드릴게요. 1,200만원 1년 예금하면 예상 이자 42만원 만기 시 예상금액 1,242만원)"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide swiper-slide-3">
+                  <figure>
+                    <img src="./assets/images/sec02-slide-img03-1.png" alt="카카오뱅크 개인 금융 서비스 - 모임통장(러닝모임통장 매월 20일 5만원씩)" />
+                  </figure>
+                </div>
+                <div class="swiper-slide swiper-slide-4">
+                  <figure>
+                    <img
+                      src="./assets/images/sec02-slide-img04.png"
+                      alt="카카오뱅크 개인 금융 서비스 - 카카오뱅크 AI 검색(카카오뱅크가 궁금할 땐 언제든지 저에게 물어보세요 - 메시지를 입력해주세요.)"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide swiper-slide-5">
+                  <figure>
+                    <img
+                      src="./assets/images/sec02-slide-img05.png"
+                      alt="카카오뱅크 개인 금융 서비스 - 주택담보대출(주택담보대출 예상한도 300,000,000원)"
+                    />
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
