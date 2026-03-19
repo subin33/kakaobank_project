@@ -1,12 +1,16 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard/Pretendard-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 html {
   font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .con {
@@ -187,22 +191,22 @@ html {
   width: 24px;
   height: 24px;
   -webkit-mask-size: contain;
-  mask-size: contain;
+          mask-size: contain;
   -webkit-mask-position: center;
-  mask-position: center;
+          mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   display: inline-block;
   background-color: #000;
   padding-inline: 20px;
 }
 .select-lang-menu .ko-link {
   -webkit-mask-image: url(../assets/images/ic-kr.svg);
-  mask-image: url(../assets/images/ic-kr.svg);
+          mask-image: url(../assets/images/ic-kr.svg);
 }
 .select-lang-menu .en-link {
   -webkit-mask-image: url(../assets/images/ic-en.svg);
-  mask-image: url(../assets/images/ic-en.svg);
+          mask-image: url(../assets/images/ic-en.svg);
   background-color: #888;
 }
 
@@ -307,7 +311,7 @@ html {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 @keyframes scrollDown {
   0% {
@@ -322,7 +326,7 @@ html {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .section-2 {
@@ -364,30 +368,35 @@ html {
   border-radius: 20px;
   overflow: hidden;
   margin-right: 20px;
-}
-.section-2-content .swiper-slide-1 {
-  left: 5.9375%;
-  transform: rotate(-3deg);
   top: 0px;
-}
-.section-2-content .swiper-slide-2 {
-  left: 20.3645%;
-  transform: translate(-50%, 0%) translate(50%, 0px);
-  top: 102px;
-}
-.section-2-content .swiper-slide-3 {
   left: calc(50% + 9px);
   transform: translateX(-50%);
+  transition: top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.section-2-content .swiper-slide-4 {
-  left: 63.125%;
-  transform: translate(-50%, 0%) translate(50%, 0px);
-  top: 30px;
+.section-2-content .swiper-slide-1.spread {
+  left: 5.9375% !important;
+  transform: rotate(-3deg) !important;
+  top: 0px !important;
 }
-.section-2-content .swiper-slide-5 {
-  left: calc(75.625% + 23px);
-  transform: translate(-50%, 0%) translate(50%, 0px) rotate(2deg);
-  top: 73px;
+.section-2-content .swiper-slide-2.spread {
+  left: 20.3645% !important;
+  transform: translate(-50%, 0%) translate(50%, 0px) !important;
+  top: 102px !important;
+}
+.section-2-content .swiper-slide-3.spread {
+  left: calc(50% + 9px) !important;
+  transform: translateX(-50%) !important;
+  z-index: 1;
+}
+.section-2-content .swiper-slide-4.spread {
+  left: 63.125% !important;
+  transform: translate(-50%, 0%) translate(50%, 0px) !important;
+  top: 30px !important;
+}
+.section-2-content .swiper-slide-5.spread {
+  left: calc(75.625% + 23px) !important;
+  transform: translate(-50%, 0%) translate(50%, 0px) rotate(2deg) !important;
+  top: 73px !important;
 }
 
 /* 섹션 구현 끝 */
