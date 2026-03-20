@@ -624,32 +624,86 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.section-4 .grid-item {
+.section-4 .cont-grid-wrap .grid-item {
   width: 100%;
   height: 368px;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid red;
 }
-.section-4 .grid-item-1 {
+.section-4 .cont-grid-wrap .grid-item-1 {
   background: url("../assets/images/sec04_slide-img01.jpg") no-repeat center/cover;
 }
-.section-4 .grid-item-2 {
+.section-4 .cont-grid-wrap .grid-item-2 {
   background: url("../assets/images/sec04_slide-img02.jpg") no-repeat center/cover;
 }
-.section-4 .grid-item-3 {
+.section-4 .cont-grid-wrap .grid-item-3 {
   background: url("../assets/images/sec04_slide-img03.jpg") no-repeat center/cover;
 }
-.section-4 .link-item {
+.section-4 .cont-grid-wrap .link-item {
   display: block;
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 40px;
 }
-.section-4 .img-box {
+.section-4 .cont-grid-wrap .link-item .img-box {
   width: 100%;
   height: 100%;
+}
+.section-4 .cont-grid-wrap .link-item:hover .arrow-icon-box .arrow-icon {
+  left: 200% !important;
+}
+.section-4 .cont-grid-wrap .link-item:hover .arrow-icon-box::after {
+  left: 50% !important;
+  transition: all 0.3s ease-in-out;
+}
+.section-4 .cont-grid-wrap .info-box {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-4 .cont-grid-wrap .info-box h5 {
+  font-size: 2.8rem;
+  line-height: 1.44;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-left: 6.3%;
+}
+.section-4 .cont-grid-wrap .info-box .arrow-icon-box {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  margin-right: 3%;
+}
+.section-4 .cont-grid-wrap .info-box .arrow-icon-box .arrow-icon {
+  -webkit-mask: url(../assets/images/ic-link-arrow-right-black.svg) no-repeat center/cover;
+          mask: url(../assets/images/ic-link-arrow-right-black.svg) no-repeat center/cover;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+.section-4 .cont-grid-wrap .info-box .arrow-icon-box::after {
+  content: "";
+  background: url(../assets/images/ic-link-arrow-right-black.svg) no-repeat center/cover;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* 섹션 구현 끝 */
