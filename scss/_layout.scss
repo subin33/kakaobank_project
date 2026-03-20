@@ -435,5 +435,197 @@
 
 // 두 번째 섹션 구현 끝
 
+// 세 번째 섹션 구현 시작
+.section-3 {
+  padding-block: 100px;
+
+  &-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+
+  &-content {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.left-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(50% - 30px);
+  overflow: hidden;
+
+  a {
+    height: 460px;
+    overflow: hidden;
+
+    &:hover {
+      .news-card::after {
+        transform: scale(0.99);
+      }
+
+      .img-box {
+        transform: scale(0.99);
+      }
+    }
+  }
+
+  .news-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.83%, rgba(0, 0, 0, 0.05) 65.22%, rgba(0, 0, 0, 0.4) 100%), rgba(0, 0, 0, 0.4);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .img-box {
+      background: url("../assets/images/today-news-card.png") no-repeat center / cover;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.01);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 20px;
+    }
+
+    .news-card-text {
+      padding: 50px 0 28px 20px;
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 580px;
+      height: 100%;
+
+      .news-title {
+        font-size: 2.8rem;
+        line-height: 1.44;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: $white-100;
+      }
+
+      p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: $white-100;
+      }
+    }
+  }
+
+  .date-box {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    padding: 32px 40px;
+
+    .date-label {
+      font-size: 1.8rem;
+      line-height: 1.44;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .date-value {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      font-size: 3rem;
+      line-height: 1.44;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+
+      .date-num {
+        color: #888;
+      }
+
+      .date-day {
+        margin-top: -10px;
+      }
+    }
+  }
+}
+
+.right-cont {
+  width: calc(50% - 30px);
+
+  .news-item {
+    border-bottom: 1px solid #e5e5e5;
+
+    &:first-child {
+      border-top: 1px solid #e5e5e5;
+    }
+
+    a {
+      width: 100%;
+      padding: 28px 0;
+      gap: 12px;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .text-area {
+    .news-title {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      transition: all 0.35s ease;
+      font-size: 2.2rem;
+      line-height: 1.44;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .news-desc {
+      color: #888;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .date-area {
+    font-size: 1.4rem;
+    line-height: 1.44;
+    font-weight: 700;
+    color: #888;
+  }
+}
+// 세 번째 섹션 구현 끝
+
 /* 섹션 구현 끝 */
 /* =========================== */
