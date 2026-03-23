@@ -665,7 +665,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .section-4 .cont-grid-wrap .link-item:hover .img-box {
-  transform: scale(0.99);
+  transform: scale(0.98);
 }
 .section-4 .cont-grid-wrap .info-box {
   position: absolute;
@@ -715,6 +715,65 @@ body {
   width: 17px;
   height: 17px;
   transition: all 0.3s ease-in-out;
+}
+
+.section-5-title {
+  font-size: 4rem;
+  line-height: 1.36;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.section-5-content {
+  border: 5px solid red;
+}
+.section-5-content .left-slide {
+  border: 5px solid blue;
+  width: 57.639%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.section-5-content .right-slide {
+  border: 5px solid green;
+  width: 42.361%;
+  overflow: hidden;
+}
+
+.section-5__swiper-container .slide-container div {
+  flex-shrink: 0;
+}
+.section-5__swiper-container .swiper-slide {
+  height: 610px;
+}
+.section-5__swiper-container .swiper-slide .img-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.section-5__swiper-container .swiper-slide .img-box .img-cont {
+  width: 100%;
+  height: 100%;
+}
+.section-5__swiper-container .swiper-slide-1 .img-cont {
+  background: url(../assets/images/sec05-slide-img-01.jpg) no-repeat center/cover;
+}
+.section-5__swiper-container .swiper-slide-2 .img-cont {
+  background: url(../assets/images/sec05-slide-img-02.jpg) no-repeat center/cover;
+}
+.section-5__swiper-container .swiper-slide-3 .img-cont {
+  background: url(../assets/images/sec05-slide-img-03.jpg) no-repeat center/cover;
+}
+.section-5__swiper-container .swiper-slide-4 .img-cont {
+  background: url(../assets/images/sec05-slide-img-04.jpg) no-repeat center/cover;
+}
+.section-5__swiper-container .swiper-slide-5 .img-cont {
+  background: url(../assets/images/sec05-slide-img-05.jpg) no-repeat center/cover;
+}
+.section-5__swiper-container .swiper-slide-6 .img-cont {
+  background: url(../assets/images/sec05-slide-img-06.jpg) no-repeat center/cover;
 }
 
 /* 섹션 구현 끝 */
