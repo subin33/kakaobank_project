@@ -42,8 +42,55 @@ function initSwipers() {
   const section5SwiperEl = document.querySelector(".section-5__swiper-container");
 
   if (section5SwiperEl) {
+    const section5PaginationEl = section5SwiperEl.querySelector(".progress-bar .swiper-pagination");
+
     swiperInstances.section5 = new Swiper(section5SwiperEl, {
       slidesPerView: 1,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      observer: true,
+      observeParents: true,
+      resizeObserver: true,
+      speed: 400,
+      loop: true,
+      allowTouchMove: false,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: section5PaginationEl,
+        clickable: true,
+        type: "bullets",
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + "<i></i>" + "<b></b>" + "</span>";
+        },
+      },
+      on: {
+        init: function () {
+          // 슬라이드가 1개라면 pagination 숨김 처리
+          const realSlideCount = section5SwiperEl.querySelectorAll(".swiper-slide:not(.swiper-slide-duplicate)").length;
+
+          if (realSlideCount <= 1 && section5PaginationEl) {
+            section5PaginationEl.style.display = "none";
+          }
+        },
+        slideChange: function () {
+          // 이전 슬라이드 bullet에 is-passed 클래스 추가
+          const bullets = section5SwiperEl.querySelectorAll(".swiper-pagination-bullet");
+          const realIndex = this.realIndex;
+
+          bullets.forEach((bullet, index) => {
+            if (index < realIndex) {
+              bullet.classList.add("is-passed");
+            } else {
+              bullet.classList.remove("is-passed");
+            }
+          });
+        },
+      },
     });
   }
 
