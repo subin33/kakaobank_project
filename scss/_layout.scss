@@ -771,10 +771,10 @@
   }
 
   &-content {
-    border: 5px solid red;
+    border-radius: 20px;
+    overflow: hidden;
 
     .left-slide {
-      border: 5px solid blue;
       width: 57.639%;
       position: relative;
       display: flex;
@@ -805,7 +805,7 @@
           -webkit-box-orient: vertical;
           font-size: 1.8rem;
           line-height: 1.5;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: -0.01em;
         }
 
@@ -873,7 +873,6 @@
     }
 
     .right-slide {
-      border: 5px solid green;
       width: 42.361%;
       overflow: hidden;
     }
@@ -894,7 +893,6 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      border-radius: 20px;
 
       .img-cont {
         width: 100%;
@@ -940,7 +938,6 @@
   }
 
   .progress-bar {
-    // border: 3px solid red;
     position: absolute;
     bottom: 40px;
     left: 50%;

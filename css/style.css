@@ -732,10 +732,10 @@ body {
   letter-spacing: -0.02em;
 }
 .section-5-content {
-  border: 5px solid red;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .section-5-content .left-slide {
-  border: 5px solid blue;
   width: 57.639%;
   position: relative;
   display: flex;
@@ -764,7 +764,7 @@ body {
   -webkit-box-orient: vertical;
   font-size: 1.8rem;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 .section-5-content .left-slide .text-box .link-btn {
@@ -822,7 +822,6 @@ body {
   background: url("../assets/images/ic-arrow-left.svg") no-repeat center;
 }
 .section-5-content .right-slide {
-  border: 5px solid green;
   width: 42.361%;
   overflow: hidden;
 }
@@ -837,7 +836,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 20px;
 }
 .section-5__swiper-container .swiper-slide .img-box .img-cont {
   width: 100%;
