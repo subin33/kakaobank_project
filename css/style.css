@@ -836,6 +836,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 20px;
 }
 .section-5__swiper-container .swiper-slide .img-box .img-cont {
   width: 100%;
@@ -908,6 +909,66 @@ body {
   width: 0%;
   height: 4px;
   background-color: #fff;
+}
+
+.section-6 .flex-item {
+  width: calc(50% - 10px);
+}
+.section-6 .flex-cont {
+  padding: 24px 32px 24px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+}
+.section-6 .flex-cont:hover .arrow-icon-box::after {
+  top: 50%;
+  left: 50%;
+}
+.section-6 .flex-cont:hover .arrow-icon-box .arrow-icon {
+  top: -100%;
+  left: 200%;
+}
+.section-6 .flex-cont h6 {
+  font-size: 2rem;
+  line-height: 1.44;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.section-6 .flex-cont .arrow-icon-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-6 .flex-cont .arrow-icon-box .arrow-icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: url(../assets/images/ic-circle-outlink-b.svg) no-repeat center/contain;
+  transition: all 0.3s ease-in-out;
+}
+.section-6 .flex-cont .arrow-icon-box::after {
+  content: "";
+  position: absolute;
+  top: 200%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: url(../assets/images/ic-circle-outlink-b.svg) no-repeat center/contain;
+  transition: all 0.3s ease-in-out;
 }
 
 /* 섹션 구현 끝 */
