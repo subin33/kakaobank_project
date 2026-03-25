@@ -68,6 +68,10 @@ function initSwipers() {
           return '<span class="' + className + '">' + "<i></i>" + "<b></b>" + "</span>";
         },
       },
+      navigation: {
+        nextEl: ".section-5-content .swiper-btn-next",
+        prevEl: ".section-5-content .swiper-btn-prev",
+      },
       on: {
         init: function () {
           // 슬라이드가 1개라면 pagination 숨김 처리
