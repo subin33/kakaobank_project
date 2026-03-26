@@ -260,6 +260,44 @@ function initTopButton() {
 }
 
 // ========================================
+// 헤더 스크롤 이벤트 - 스크롤 방향에 따라 헤더 슬라이드
+// ========================================
+function initHeaderScroll() {
+  const header = document.getElementById("header");
+  if (!header) return;
+
+  let lastScrollY = 0;
+  let ticking = false;
+
+  function handleHeaderScroll() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 0) {
+      // 최상단이면 헤더 항상 표시
+      header.classList.remove("header-hidden");
+    } else if (currentScrollY > lastScrollY) {
+      // 스크롤 다운 → 헤더 숨김 (아래→위로 슬라이드)
+      header.classList.add("header-hidden");
+    } else {
+      // 스크롤 업 → 헤더 표시 (위→아래로 슬라이드)
+      header.classList.remove("header-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleHeaderScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+// ========================================
 // 초기화 실행
 // ========================================
 initNavigation();
@@ -268,3 +306,4 @@ initSwipers();
 initSection2ScrollAnimation();
 initTodayDate();
 initTopButton();
+initHeaderScroll();

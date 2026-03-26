@@ -32,9 +32,16 @@
 /* 헤더 구현 시작 */
 #header {
   z-index: 999;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 
   &:hover {
     background-color: #fff;
+  }
+
+  // 스크롤 다운 시 헤더 숨김 (아래→위로 슬라이드)
+  &.header-hidden {
+    transform: translateY(-100%);
   }
 }
 

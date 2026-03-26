@@ -99,9 +99,14 @@ body {
 /* 헤더 구현 시작 */
 #header {
   z-index: 999;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 #header:hover {
   background-color: #fff;
+}
+#header.header-hidden {
+  transform: translateY(-100%);
 }
 
 .logo {
