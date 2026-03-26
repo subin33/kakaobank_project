@@ -973,3 +973,163 @@ body {
 
 /* 섹션 구현 끝 */
 /* =========================== */
+/* =========================== */
+/* footer 구현 시작 */
+#footer {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+#footer .con {
+  position: relative;
+}
+#footer .footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+#footer .footer-logo {
+  flex-shrink: 0;
+  width: 160px;
+}
+#footer .footer-logo .logo {
+  display: block;
+  width: 130px;
+  height: 22px;
+  background: url(../assets/images/logo.svg) no-repeat center/contain;
+}
+#footer .footer-nav {
+  width: 100%;
+  max-width: 832px;
+  padding-right: 6.944%;
+}
+#footer .footer-nav-depth1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 20px;
+}
+#footer .footer-nav-col {
+  width: calc(33.333% - 13.333px);
+}
+#footer .footer-nav-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #000;
+  margin-bottom: 12px;
+}
+#footer .footer-nav-depth2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+#footer .footer-nav-depth2 li a {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #888;
+  transition: color 0.2s ease;
+}
+#footer .footer-nav-depth2 li a:hover {
+  color: #444;
+}
+#footer .footer-top-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#footer .footer-top-btn .btn-top {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#footer .footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 32px;
+}
+#footer .footer-badges {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+#footer .footer-badges .badge-item {
+  width: 46px;
+  height: 46px;
+}
+#footer .footer-badges .badge-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#footer .footer-info {
+  flex: 1;
+}
+#footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+#footer .footer-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#footer .footer-link-list li {
+  display: flex;
+  align-items: center;
+}
+#footer .footer-link-list li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+#footer .footer-link-list li a {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #888;
+  transition: color 0.2s ease;
+}
+#footer .footer-link-list li a:hover {
+  color: #444;
+}
+#footer .footer-link-list li a strong {
+  font-weight: 700;
+  color: #444;
+}
+#footer .footer-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+#footer .footer-copyright span {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #888;
+}
+#footer .footer-copyright span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #ddd;
+  margin-left: 8px;
+}
+
+/* footer 구현 끝 */

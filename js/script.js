@@ -244,6 +244,22 @@ function initTodayDate() {
 }
 
 // ========================================
+// footer - Top 버튼 (페이지 상단으로 이동)
+// ========================================
+function initTopButton() {
+  const btnTop = document.querySelector(".btn-top");
+
+  if (btnTop) {
+    btnTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+}
+
+// ========================================
 // 초기화 실행
 // ========================================
 initNavigation();
@@ -251,3 +267,4 @@ updateSection5Content(0); // 초기 로드 시 첫 번째 데이터로 렌더링
 initSwipers();
 initSection2ScrollAnimation();
 initTodayDate();
+initTopButton();
