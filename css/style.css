@@ -1063,11 +1063,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.4s ease-in-out;
   width: 30px;
   height: 30px;
   background: url(../assets/images/ic-arrow-up.svg) no-repeat center/contain;
-  transition: 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 #footer .footer-top-btn::after {
   content: "";
@@ -1077,13 +1076,10 @@ body {
   transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
-  background: url(../assets/images/ic-arrow-up.svg) center center/contain no-repeat;
-  transition: 0.4s ease-in-out;
+  background: url(../assets/images/ic-arrow-up.svg) no-repeat center/contain;
+  transition: all 0.4s ease-in-out;
 }
 #footer .footer-bottom {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
   padding-top: 32px;
 }
 #footer .footer-badges {
@@ -1101,9 +1097,6 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-#footer .footer-info {
-  flex: 1;
-}
 #footer .footer-links {
   display: flex;
   flex-direction: column;
@@ -1113,24 +1106,31 @@ body {
 #footer .footer-link-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  width: 100%;
+  max-width: 832px;
+  gap: 8px 0;
 }
 #footer .footer-link-list li {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-right: 8px;
+  padding-right: 9px;
 }
 #footer .footer-link-list li:not(:last-child)::after {
   content: "";
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 1px;
-  height: 12px;
-  background-color: #ddd;
-  margin: 0 10px;
+  height: 100%;
+  max-height: 13px;
+  background: #888;
 }
 #footer .footer-link-list li a {
   font-size: 1.2rem;
   line-height: 1.5;
-  font-weight: 400;
   color: #888;
   transition: color 0.2s ease;
 }
@@ -1145,20 +1145,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px;
+  gap: 0 12px;
 }
 #footer .footer-copyright span {
-  font-size: 1.2rem;
-  line-height: 1.5;
   color: #888;
-}
-#footer .footer-copyright span:not(:last-child)::after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 10px;
-  background-color: #ddd;
-  margin-left: 8px;
+  font-size: 1.4rem;
+  line-height: 1.44;
+  font-weight: 500;
 }
 
 /* footer 구현 끝 */
