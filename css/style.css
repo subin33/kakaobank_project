@@ -1039,6 +1039,13 @@ body {
   position: absolute;
   top: 0;
   right: 10px;
+  overflow: hidden;
+}
+#footer .footer-top-btn:hover .arrow-up {
+  top: -150%;
+}
+#footer .footer-top-btn:hover::after {
+  top: 50%;
 }
 #footer .footer-top-btn .btn-top {
   width: 52px;
@@ -1050,6 +1057,28 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+#footer .footer-top-btn .arrow-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease-in-out;
+  width: 30px;
+  height: 30px;
+  background: url(../assets/images/ic-arrow-up.svg) no-repeat center/contain;
+  transition: 0.4s ease-in-out;
+}
+#footer .footer-top-btn::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: url(../assets/images/ic-arrow-up.svg) center center/contain no-repeat;
+  transition: 0.4s ease-in-out;
 }
 #footer .footer-bottom {
   display: flex;
